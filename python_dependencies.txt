@@ -1,0 +1,7 @@
+keras
+python-gflags
+opencv-python
+rospkg
+imutils
+# Tensorflow is also a dependency, but it should be installed outside of this to controll gpu usage.
+# tensorflow==1.13.1
