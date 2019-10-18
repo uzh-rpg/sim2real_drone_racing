@@ -1,4 +1,4 @@
-# rpg_drone_racing
+# sim2real_drone_racing
 
 Make some cool intro.
 
@@ -17,11 +17,10 @@ catkin config --merge-devel
 catkin config --cmake-args -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_FLAGS=-fdiagnostics-color
 cd src
 
-git clone git@github.com:uzh-rpg/rpg_drone_racing.git
-cd rpg_drone_racing
-git checkout code_release
+git clone git@github.com:uzh-rpg/sim2real_drone_racing.git
+cd sim2real_drone_racing
 cd ..
-vcs-import < rpg_drone_racing/dependencies.yaml
+vcs-import < sim2real_drone_racing/dependencies.yaml
 
 # Build and re-source the workspace
 catkin build
@@ -37,7 +36,7 @@ pip install tensorflow-gpu==1.13.1
 #pip install tensorflow==1.13.1
 
 # Install Required Python dependecies
-cd $CATKIN_WS/src/rpg_drone_racing
+cd $CATKIN_WS/src/sim2real_drone_racing
 pip install -r python_dependencies.txt
 
 ```
