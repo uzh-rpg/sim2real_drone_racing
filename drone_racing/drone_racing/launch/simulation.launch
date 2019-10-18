@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<launch>
+    <arg name="quad_name" default="hummingbird"/>
+    <arg name="mav_name" default="$(arg quad_name)"/>
+    <arg name="model" value="$(find drone_racing)/resources/simulation/vehicles/$(arg quad_name)_rgbcamera300200.gazebo"/>
+    <arg name="world_name" default="$(find drone_racing)/resources/worlds/race_track.world"/>
+    <arg name="x_init" default="0.0"/>
+    <arg name="y_init" default="22.0"/>
+
+    <arg name="enable_logging" default="false"/>
+    <arg name="enable_ground_truth" default="true"/>
+    <arg name="log_file" default="$(arg quad_name)"/>
+    <arg name="paused" value="false"/>
+    <arg name="gui" value="false"/>
+    <arg name="use_ground_truth" value="true"/>
+    <arg name="verbose" default="false"/>
+    <arg name="debug" default="false"/>
+
+    <!-- Basic simulation environment !-->
+    <include file="$(find rpg_rotors_interface)/launch/basics/base_quad_simulation.launch">
+        <arg name="quad_name" value="$(arg quad_name)"/>
+        <arg name="world_name" value="$(arg world_name)"/>
+        <arg name="paused" value="$(arg paused)"/>
+        <arg name="gui" value="$(arg gui)"/>
+        <arg name="use_ground_truth" value="$(arg use_ground_truth)"/>
+        <arg name="debug" value="$(arg debug)"/>
+        <arg name="verbose" value="$(arg verbose)"/>
+        <arg name="custom_models" value="$(find drone_racing)/resources"/>
+        <arg name="enable_command_feedthrough" value="true"/>
+        <arg name="use_mpc" value="false"/>
+
+        <arg name="mav_name" value="$(arg mav_name)"/>
+        <arg name="model" value="$(arg model)"/>
+        <arg name="enable_logging" value="$(arg enable_logging)"/>
+        <arg name="enable_ground_truth" value="$(arg enable_ground_truth)"/>
+        <arg name="log_file" value="$(arg log_file)"/>
+
+        <arg name="x_init" value="$(arg x_init)"/>
+        <arg name="y_init" value="$(arg y_init)"/>
+    </include>
+
+    <group ns="$(arg quad_name)">
+        <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"/>
+        <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher"/>
+    </group>
+
+    <!-- RVIZ -->
+    <group>
+        <node pkg="rviz" type="rviz" name="rviz"
+              args="-d $(find drone_racing)/resources/rviz/race_track.rviz"/>
+    </group>
+
+    <!-- Drone Racing -->
+    <group ns="$(arg quad_name)">
+        <node pkg="drone_racing" type="drone_racing_node" name="drone_racing_node" output="screen">
+            <remap from="image_rgb" to="/$(arg quad_name)/rgb_camera/camera_1/image_raw"/>
+            <remap from="camera_info" to="/$(arg quad_name)/vi_sensor_1/camera_depth/depth/camera_info"/>
+            <remap from="state_estimate" to="odometry_sensor1/odometry"/>
+            <rosparam file="$(find drone_racing)/parameters/main.yaml"/>
+            <rosparam file="$(find drone_racing)/parameters/goals.yaml"/>
+            <param name="root_dir" value="$(find deep_drone_racing_learner)/data/Training"/>
+            <param name="trajectory_path" value="$(find drone_racing)/resources/global_trajectories"/>
+            <param name="quad_frame" value="/hummingbird/base_link"/>
+        </node>
+    </group>
+</launch>

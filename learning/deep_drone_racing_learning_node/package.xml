@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>deep_drone_racing_learning</name>
+  <version>0.0.1</version>
+  <description>Navigation with a deep network</description>
+
+  <maintainer email="loquercio@ifi.uzh.ch">tony</maintainer>
+
+  <license>BSD</license>
+
+  <buildtool_depend>catkin_simple</buildtool_depend>
+  <buildtool_depend>catkin</buildtool_depend>
+    
+  <depend>roscpp</depend>
+  <depend>rospy</depend>
+  <depend>bluefox_ros</depend>
+  <depend>deep_drone_racing_learner</depend>
+  <depend>std_msgs</depend>
+  
+  <build_depend>message_generation</build_depend>
+  
+
+  <export>
+
+  </export>
+</package>

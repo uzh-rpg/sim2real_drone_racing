@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<launch>	
+  <node name="test_racing" pkg="test_racing" type="test_racing.py" output="screen">      
+	  <param name="ddr_dir" value="$(find test_racing)"/>
+  </node>
+</launch>	

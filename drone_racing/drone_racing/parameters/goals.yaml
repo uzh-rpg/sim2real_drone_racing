@@ -1,0 +1,32 @@
+goal_positions:
+  - {x: 2.7, y: 6.7, z: 2.0, gate: 1.0}
+  - {x: 10.6, y: 4.2, z: 2.0, gate: 1.0}
+  - {x: 19.0, y: 10.0, z: 1.9, gate: 1.0}
+  - {x: 26.6, y: 19.6, z: 2.0, gate: 1.0}
+  - {x: 35.1, y: 26.5, z: 2.0, gate: 1.0}
+  - {x: 45.0, y: 22.2, z: 1.9, gate: 1.0}
+  - {x: 47.4, y: 13.6, z: 2.0, gate: 1.0}
+  - {x: 42.4, y: 5.8, z: 2.0, gate: 1.0}
+  - {x: 33.7, y: 4.7, z: 1.9, gate: 1.0}
+  - {x: 26.0, y: 9.4, z: 2.0, gate: 1.0}
+  - {x: 18.2, y: 20.0, z: 2.0, gate: 1.0}
+  - {x: 10.2, y: 25.0, z: 2.0, gate: 1.0}
+  - {x: 2.1, y: 22.0, z: 1.9, gate: 1.0}
+  - {x: -1.1, y: 13.2, z: 2.0, gate: 1.0}
+
+goal_orientations:
+  - {yaw: -0.44, offset: 0.0}
+  - {yaw: 0.0, offset: 0.0}
+  - {yaw: 0.97, offset: 0.0}
+  - {yaw: -2.2, offset: 0.0}
+  - {yaw: 3.5, offset: 0.0}
+  - {yaw: 2.57, offset: 0.0}
+  - {yaw: 1.57, offset: 0.0}
+  - {yaw: -2.6, offset: 0.0}
+  - {yaw: 3.1, offset: 0.0}
+  - {yaw: -1.0, offset: 0.0}
+  - {yaw: -0.9, offset: 0.0}
+  - {yaw: -3.1, offset: 0.0}
+  - {yaw: 0.8, offset: 0.0}
+  - {yaw: -1.5, offset: 0.0}
+

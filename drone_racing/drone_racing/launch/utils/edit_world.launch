@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<launch>
+  <arg name="custom_models" value="$(find drone_racing)/resources"/>
+  <env name="GAZEBO_MODEL_PATH" 
+      value="${GAZEBO_MODEL_PATH}:$(find rotors_gazebo)/models:$(arg custom_models)"/>
+  <env name="GAZEBO_RESOURCE_PATH" 
+      value="${GAZEBO_RESOURCE_PATH}:$(find rotors_gazebo)/models"/>
+
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="world_name" value="$(find drone_racing)/resources/worlds/race_track.world" />
+    <arg name="paused" value="false"/>
+    <arg name="gui" value="true"/>
+    <arg name="verbose" value="true"/>
+  </include>
+</launch>

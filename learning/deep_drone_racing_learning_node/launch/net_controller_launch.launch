@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<launch>
+	<arg name="ckpt_file" default="$(find deep_drone_racing_learner)/src/ddr_learner/results/best_model/navigation_model"/>
+
+	<node name="deep_drone_racing_learning" pkg="deep_drone_racing_learning" args="--f=0.5 --ckpt_file=$(arg ckpt_file)"  type="deep_drone_racing_node.py" output="screen">      
+	<remap from="cnn_predictions" to="/cnn_out/traj"/>
+        <remap from="state_change" to="/hummingbird/state_change"/>
+        <remap from="camera" to="/hummingbird/rgb_camera/camera_1/image_raw"/>
+        <remap from="state_estimate" to="/hummingbird/state_estimate"/>
+
+  </node>
+
+</launch>
