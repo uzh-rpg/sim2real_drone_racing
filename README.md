@@ -3,7 +3,10 @@
 Make some cool intro.
 
 ### Installation
-Ideally (but optionally) create new catkin workspace
+Ideally (but optionally) create new catkin workspace.
+
+Install ros melodic. This works on Ubuntu 18.04, other OS are possible but not supported.
+
 ```bash
 export ROS_VERSION=melodic
 mkdir drone_racing_ws
