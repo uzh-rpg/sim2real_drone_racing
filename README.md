@@ -47,7 +47,7 @@ pip install -r python_dependencies.txt
 
 ## Let's Race
 
-In one terminal, type. You don't need GPU for execution. Note that if the network can't run at least at 10/15Hz, you won't be able to fly successfully.
+Open a terminal and paste the commands below. You shouldn't need a GPU for execution. However, note that if the network can't run at least at 10Hz, you won't be able to fly successfully.
 
 ```bash
 cd drone_racing_ws
@@ -55,7 +55,6 @@ cd drone_racing_ws
 . ./droneflow/bin/activate
 export CUDA_VISIBLE_DEVICES=''
 roslaunch deep_drone_racing_learning  net_controller_launch.launch
-
 ```
 
 Open an other terminal and type
@@ -76,8 +75,8 @@ roslaunch test_racing test_racing.launch
 ```bash
 cd drone_racing_ws
 . ./catkin_ddr/devel/setup.bash
-roscd reactive_navigation/resources/scripts/simulation
-python collect_data_moving_gates.py
+roscd drone_racing/resources/scripts
+python collect_data.py
 
 ```
 
