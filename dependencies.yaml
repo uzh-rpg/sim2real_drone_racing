@@ -54,7 +54,7 @@ repositories:
   octomap_ros:
     type: git
     url: git@github.com:OctoMap/octomap_ros.git
-    version: master
+    version: melodic-devel
   rpg_quadrotor_control:
     type: git
     url: git@github.com:uzh-rpg/rpg_quadrotor_control.git
