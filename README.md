@@ -98,8 +98,6 @@ roslaunch test_racing test_racing.launch
 
 ```
 
-
-
 ## Train your own Sim2Real model
 
 You can use the following commands to generate data in simulation and train your model on it. The trained checkpoint can then be used to control a physical platform on a race track.
@@ -116,7 +114,7 @@ python collect_data.py
 ```
 
 It is possible to change parameters (number of iteration per background/ gate texture/ etc. ) in the above script.
-Defaults should be good. Optionally, you can use the data we have already collected, available at [this link](train_data.zip).
+Defaults should be good. Optionally, you can use the data we have already collected, available at [this link](http://rpg.ifi.uzh.ch/datasets/sim2real_ddr/simulation_training_data.zip).
 
 
 ### Train the Network
@@ -126,25 +124,26 @@ roscd deep_drone_racing_learner/src/ddr_learner
 
 ```
 
-Modify the file [train\_model.sh](./learning/deep_drone_racing_learner/src/ddr_learner/train_model.sh) to add the path of validation data collected in the real world, which you can download from [this link](path_to_data.zip).
-Then, you can run the following to start data collection.
+Modify the file [train\_model.sh](./learning/deep_drone_racing_learner/src/ddr_learner/train_model.sh) to add the path of validation data collected in the real world, which you can download from [this\ link](http://rpg.ifi.uzh.ch/datasets/sim2real_ddr/validation_real_data.zip).
+Then, run the following command to train the model.
 
 ```bash
-./train_model.zsh
+./train_model.sh
 
 ```
 
 ### Test the Network
 
 Edit the following file to use the checkpoint you just trained
+
 ```bash
 rosed deep_drone_racing_learning net_controller_launch.launch
 
 ```
 
-Now test the network in an environment which was never observed at training time. Instructions are equivalent to the one used above to train the network.
+The trained network can now be tested in an environment which was never observed at training time.
 
-Open the following network and run:
+Open a terminal and run:
 
 ```bash
 cd drone_racing_ws
