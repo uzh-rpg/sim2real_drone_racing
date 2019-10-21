@@ -77,8 +77,9 @@ pip install -r python_dependencies.txt
 
 ## Let's Race
 
-Once you have install the dependencies, you will be able to fly in simulation with our pre-trained checkpoint. You don't need GPU for execution. Note that if the network can't run at least at 10Hz, you won't be able to fly successfully.
+Once you have installed the dependencies, you will be able to fly in simulation with our pre-trained checkpoint. You don't need GPU for execution. Note that if the network can't run at least at 10Hz, you won't be able to fly successfully.
 
+Open a terminal and type:
 ```bash
 cd drone_racing_ws
 . ./catkin_ddr/devel/setup.bash
@@ -88,8 +89,7 @@ roslaunch deep_drone_racing_learning  net_controller_launch.launch
 
 ```
 
-Open an other terminal and type
-
+Open an other terminal and type:
 ```bash
 cd drone_racing_ws
 . ./catkin_ddr/devel/setup.bash
@@ -124,7 +124,7 @@ roscd deep_drone_racing_learner/src/ddr_learner
 
 ```
 
-Modify the file [train\_model.sh](./learning/deep_drone_racing_learner/src/ddr_learner/train_model.sh) to add the path of validation data collected in the real world, which you can download from [this\ link](http://rpg.ifi.uzh.ch/datasets/sim2real_ddr/validation_real_data.zip).
+Modify the file [train\_model.sh](./learning/deep_drone_racing_learner/src/ddr_learner/train_model.sh) to add the path of validation data collected in the real world, which you can download from [this link](http://rpg.ifi.uzh.ch/datasets/sim2real_ddr/validation_real_data.zip).
 Then, run the following command to train the model.
 
 ```bash
@@ -154,7 +154,7 @@ roslaunch deep_drone_racing_learning  net_controller_launch.launch
 
 ```
 
-Open an other terminal and run
+Open an other terminal and run:
 
 ```bash
 cd drone_racing_ws
