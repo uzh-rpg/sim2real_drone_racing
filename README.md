@@ -110,8 +110,8 @@ You can use the following commands to generate data in simulation and train your
 cd drone_racing_ws
 . ./catkin_ddr/devel/setup.bash
 . ./droneflow/bin/activate
-roscd reactive_navigation/resources/scripts/simulation
-python collect_data_moving_gates.py
+roscd drone_racing/resources/scripts
+python collect_data.py
 
 ```
 
