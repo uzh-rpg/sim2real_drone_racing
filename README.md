@@ -154,7 +154,7 @@ roslaunch deep_drone_racing_learning  net_controller_launch.launch
 
 ```
 
-Open an other terminal and run:
+Open another terminal and run:
 
 ```bash
 cd drone_racing_ws
