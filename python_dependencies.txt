@@ -3,5 +3,7 @@ python-gflags
 opencv-python
 rospkg
 imutils
+defusedxml
+pyside2
 # Tensorflow is also a dependency, but it should be installed outside of this to controll gpu usage.
 # tensorflow==1.13.1
