@@ -50,7 +50,7 @@ catkin config --merge-devel
 catkin config --cmake-args -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_FLAGS=-fdiagnostics-color
 cd src
 
-git clone git@github.com:uzh-rpg/sim2real_drone_racing.git
+git clone https://github.com/uzh-rpg/sim2real_drone_racing.git
 cd sim2real_drone_racing
 cd ..
 vcs-import < sim2real_drone_racing/dependencies.yaml
