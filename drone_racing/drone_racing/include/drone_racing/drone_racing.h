@@ -5,10 +5,10 @@
 #include <ros/ros.h>
 
 #include <geometry_msgs/PoseStamped.h>
+#include <kindr/minimal/quat-transformation.h>
 #include <nav_msgs/Odometry.h>
 #include <quadrotor_common/trajectory_point.h>
 #include <quadrotor_msgs/AutopilotFeedback.h>
-#include <rpg_common/pose.h>
 #include <std_msgs/Bool.h>
 #include <std_msgs/Float64.h>
 #include <std_msgs/Float32MultiArray.h>
@@ -23,6 +23,14 @@
 #include "drone_racing/visualizer.h"
 
 using namespace RapidQuadrocopterTrajectoryGenerator;
+
+namespace rpg {
+
+	typedef kindr::minimal::QuatTransformation Pose;
+	typedef kindr::minimal::RotationQuaternion Rotation;
+	typedef Eigen::Vector3d Position;
+
+}  // namespace rpg_common
 
 namespace drone_racing {
 

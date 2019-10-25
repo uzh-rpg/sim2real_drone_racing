@@ -54,6 +54,7 @@ git clone https://github.com/uzh-rpg/sim2real_drone_racing.git
 cd sim2real_drone_racing
 cd ..
 vcs-import < sim2real_drone_racing/dependencies.yaml
+touch octomap/octovis/CATKIN_IGNORE
 
 # Build and re-source the workspace
 catkin build
@@ -147,7 +148,7 @@ Open a terminal and run:
 
 ```bash
 cd drone_racing_ws
-. ./catkin_ddr/devel/setup.zsh
+. ./catkin_ddr/devel/setup.sh
 . ./droneflow/bin/activate
 export CUDA_VISIBLE_DEVICES=''
 roslaunch deep_drone_racing_learning  net_controller_launch.launch
@@ -158,7 +159,7 @@ Open another terminal and run:
 
 ```bash
 cd drone_racing_ws
-. ./catkin_ddr/devel/setup.zsh
+. ./catkin_ddr/devel/setup.sh
 . ./droneflow/bin/activate
 roslaunch test_racing test_racing.launch
 
