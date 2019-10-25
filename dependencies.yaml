@@ -67,7 +67,3 @@ repositories:
     type: git
     url: git@github.com:ethz-asl/rotors_simulator.git
     version: master
-  rpg_common:
-    type: git
-    url: git@github.com:uzh-rpg/rpg_common.git
-    version: master
