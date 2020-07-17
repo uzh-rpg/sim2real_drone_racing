@@ -20,7 +20,7 @@ Video: [YouTube](https://youtu.be/vdxB89lgZhQ)
 @article{loquercio2019deep,
   title={Deep Drone Racing: From Simulation to Reality with Domain Randomization},
   doi={10.1109/TRO.2019.2942989},
-  author={Loquercio Antonio, and Kaufmann Elia, and Ranftl Ren{\'e}, and Dosovitskiy Alexey, and Koltun Vladlen, and Scaramuzza Davide},
+  author={Loquercio, Antonio and Kaufmann, Elia and Ranftl, Ren{\'e} and Dosovitskiy, Alexey and Koltun, Vladlen and Scaramuzza, Davide},
   journal={IEEE Transactions on Robotics},
   year={2019}
 }
